@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -13,13 +13,19 @@ class User(db.Model):
     username = db.Column(db.String(20), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(60), nullable=False)
+    #image
+    #audio
 
     def __repr__(self):
         return f"User('{self.username}', '{self.email}')"
 
-@app.route("/")
-def home():
-    return "Script Training Apps"
+@app.route("/templates/login", methods=["GET", "POST"])
+def login():
+
+    if request.method = "POST":
+        return "Logged in"
+    else:
+        return render_template("login.html")
     
 if __name__ == "__main__":
     app.run(debug=False) 
