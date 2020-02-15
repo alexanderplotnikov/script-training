@@ -19,13 +19,14 @@ class User(db.Model):
     def __repr__(self):
         return f"User('{self.username}', '{self.email}')"
 
-@app.route("/templates/login", methods=["GET", "POST"])
+
+@app.route("/")
 def login():
 
-    if request.method = "POST":
-        return "Logged in"
-    else:
-        return render_template("login.html")
+    # if request.method = "POST":
+    #     return "Logged in"
+    # else:
+    return render_template("/login.html")
     
 if __name__ == "__main__":
     app.run(debug=False) 

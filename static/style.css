@@ -1,0 +1,9 @@
+body{
+    text-align: center;
+}
+#loginForm{
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 250px;
+}
