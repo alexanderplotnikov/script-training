@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-    type="text/css"
-    href="/static/style.css"
-    media="screen"/>
-    <title>Login</title>
-</head>
-<body>
+{% extends 'layout.html' %}
+{% block title %}Log in{% endblock %}
+{% block main %}
     <div id="loginForm">
-        <form id="loginCredentials" method="post">
-            <label for="username">Username: </label>
-            <input type="text" id="username" name="userName" placeholder="JohnDoe">
-            <label for="password">Password: </label>
-            <input type="text" id="password" name="userPassword" placeholder="GoodPassword123">
+        <form id="loginCredentials" action="/login" method="post">
+            <label for="username">Username </label><br>
+            <input type="text" id="username" name="username" placeholder="JohnDoe"><br><br>
+            <label for="password">Password </label><br>
+            <input type="text" id="password" name="password" placeholder="GoodPassword123"><br><br>
             <input type="submit" value="Submit">
         </form>
     </div>
-</body>
-</html>
+{% endblock %}
